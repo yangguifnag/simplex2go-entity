@@ -27,7 +27,7 @@ go.work.sum
 # idea
 .idea
 
-config/
+_config/
 _codeCreate/
 main.go
-db/
+_db/
