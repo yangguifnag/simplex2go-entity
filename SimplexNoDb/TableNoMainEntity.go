@@ -1,4 +1,4 @@
-package SimplexDicDbEntity
+package SimplexNoDbEntity
 
 
 
@@ -14,8 +14,8 @@ import (
 
     模板文件 自动生成
     实体映射
-    库名: simplex_dic_db
-    表名: dic_main
+    库名: simplex_no_db
+    表名: no_main
     解释: Simplex2 CodeCreator
     作者: Simplex2
     版本: 1.0
@@ -27,8 +27,8 @@ import (
     Template File Auto-Generation
     Entity Mapping
 
-    Database Name: simplex_dic_db
-    Table Name: dic_main
+    Database Name: simplex_no_db
+    Table Name: no_main
     Description: Simplex2 CodeCreator
     Author: Simplex2
     Version: 1.0
@@ -39,29 +39,29 @@ import (
 
 */
 
-type DicMainEntity struct {
+type NoMainEntity struct {
 
 
 
 
-    /*  字段名: code
-        类型: VARCHAR
-        字段解释: 字典Code
-        字段长度: 100
+    /*  字段名: beginDate
+        类型: DATETIME
+        字段解释: --
+        字段长度: -
         是否主键: 否
         是否为空: 否
-        归宿主键: dic_main_pk_2
+        归宿主键: -
 
     */
 
-    Code string `mapstructure:",omitempty" gorm:"column:code" json:"code"`
+    BeginDate time.Time `mapstructure:",omitempty" gorm:"column:beginDate;default:null" json:"beginDate"`
 
 
 
 
     /*  字段名: createBy
         类型: VARCHAR
-        字段解释: 创建人
+        字段解释: --
         字段长度: 50
         是否主键: 否
         是否为空: 否
@@ -76,7 +76,7 @@ type DicMainEntity struct {
 
     /*  字段名: createDate
         类型: DATETIME
-        字段解释: 创建日期
+        字段解释: --
         字段长度: -
         是否主键: 否
         是否为空: 否
@@ -91,8 +91,8 @@ type DicMainEntity struct {
 
     /*  字段名: desc
         类型: VARCHAR
-        字段解释: 备注
-        字段长度: 200
+        字段解释: --
+        字段长度: 100
         是否主键: 否
         是否为空: 否
         归宿主键: -
@@ -104,47 +104,17 @@ type DicMainEntity struct {
 
 
 
-    /*  字段名: dicName
-        类型: VARCHAR
-        字段解释: 字典名
-        字段长度: 100
+    /*  字段名: endDate
+        类型: DATETIME
+        字段解释: --
+        字段长度: -
         是否主键: 否
         是否为空: 否
         归宿主键: -
 
     */
 
-    DicName string `mapstructure:",omitempty" gorm:"column:dicName" json:"dicName"`
-
-
-
-
-    /*  字段名: dicTable
-        类型: VARCHAR
-        字段解释: 字典表名
-        字段长度: 100
-        是否主键: 否
-        是否为空: 否
-        归宿主键: -
-
-    */
-
-    DicTable string `mapstructure:",omitempty" gorm:"column:dicTable" json:"dicTable"`
-
-
-
-
-    /*  字段名: dicType
-        类型: VARCHAR
-        字段解释: 字典类型
-        字段长度: 100
-        是否主键: 否
-        是否为空: 否
-        归宿主键: -
-
-    */
-
-    DicType string `mapstructure:",omitempty" gorm:"column:dicType" json:"dicType"`
+    EndDate time.Time `mapstructure:",omitempty" gorm:"column:endDate;default:null" json:"endDate"`
 
 
 
@@ -164,9 +134,39 @@ type DicMainEntity struct {
 
 
 
-    /*  字段名: labelKey
+    /*  字段名: maxNo
         类型: VARCHAR
-        字段解释: 字典键名
+        字段解释: --
+        字段长度: 255
+        是否主键: 否
+        是否为空: 否
+        归宿主键: -
+
+    */
+
+    MaxNo string `mapstructure:",omitempty" gorm:"column:maxNo" json:"maxNo"`
+
+
+
+
+    /*  字段名: noCode
+        类型: VARCHAR
+        字段解释: 编码代号
+        字段长度: 50
+        是否主键: 否
+        是否为空: 否
+        归宿主键: no_main_pk_2
+
+    */
+
+    NoCode string `mapstructure:",omitempty" gorm:"column:noCode" json:"noCode"`
+
+
+
+
+    /*  字段名: noName
+        类型: VARCHAR
+        字段解释: 号码名称
         字段长度: 50
         是否主键: 否
         是否为空: 否
@@ -174,14 +174,14 @@ type DicMainEntity struct {
 
     */
 
-    LabelKey string `mapstructure:",omitempty" gorm:"column:labelKey" json:"labelKey"`
+    NoName string `mapstructure:",omitempty" gorm:"column:noName" json:"noName"`
 
 
 
 
-    /*  字段名: parentKey
+    /*  字段名: noType
         类型: VARCHAR
-        字段解释: 父值键名
+        字段解释: --
         字段长度: 50
         是否主键: 否
         是否为空: 否
@@ -189,7 +189,7 @@ type DicMainEntity struct {
 
     */
 
-    ParentKey string `mapstructure:",omitempty" gorm:"column:parentKey" json:"parentKey"`
+    NoType string `mapstructure:",omitempty" gorm:"column:noType" json:"noType"`
 
 
 
@@ -200,7 +200,7 @@ type DicMainEntity struct {
         字段长度: -
         是否主键: 否
         是否为空: 否
-        归宿主键: dic_main_pk_2
+        归宿主键: -
 
     */
 
@@ -211,7 +211,7 @@ type DicMainEntity struct {
 
     /*  字段名: updateBy
         类型: VARCHAR
-        字段解释: 更新人
+        字段解释: --
         字段长度: 50
         是否主键: 否
         是否为空: 否
@@ -226,7 +226,7 @@ type DicMainEntity struct {
 
     /*  字段名: updateDate
         类型: DATETIME
-        字段解释: 更新时间
+        字段解释: --
         字段长度: -
         是否主键: 否
         是否为空: 否
@@ -239,28 +239,13 @@ type DicMainEntity struct {
 
 
 
-    /*  字段名: valueKey
-        类型: VARCHAR
-        字段解释: 字典值键
-        字段长度: 50
-        是否主键: 否
-        是否为空: 否
-        归宿主键: -
-
-    */
-
-    ValueKey string `mapstructure:",omitempty" gorm:"column:valueKey" json:"valueKey"`
-
-
-
-
     /*  字段名: version
         类型: VARCHAR
         字段解释: --
-        字段长度: 20
+        字段长度: 10
         是否主键: 否
         是否为空: 否
-        归宿主键: dic_main_pk_2
+        归宿主键: no_main_pk_2
 
     */
 
@@ -275,8 +260,8 @@ type DicMainEntity struct {
 
     */
 
-func (t *DicMainEntity) GetTableName() string{
-    return "dic_main"
+func (t *NoMainEntity) GetTableName() string{
+    return "no_main"
 }
 
 
@@ -286,8 +271,8 @@ func (t *DicMainEntity) GetTableName() string{
 
     */
 
-func (t *DicMainEntity) GetColumnNum() int{
-    return 15
+func (t *NoMainEntity) GetColumnNum() int{
+    return 14
 }
 
 
@@ -297,8 +282,8 @@ func (t *DicMainEntity) GetColumnNum() int{
 
     */
 
-func (t *DicMainEntity) GetFields() []string{
-    return []string{"code","createBy","createDate","desc","dicName","dicTable","dicType","id","labelKey","parentKey","status","updateBy","updateDate","valueKey","version",}
+func (t *NoMainEntity) GetFields() []string{
+    return []string{"beginDate","createBy","createDate","desc","endDate","id","maxNo","noCode","noName","noType","status","updateBy","updateDate","version",}
 }
 
 /*** 获取主键/联合主键方法 开始 方法名皆为Get0开头 ***/
@@ -307,13 +292,13 @@ func (t *DicMainEntity) GetFields() []string{
 
 
 
-    /* 方法名: Get0DicMainPk2
+    /* 方法名: Get0NoMainPk2
        返回值: []string
 
     */
 
-func (t *DicMainEntity) Get0DicMainPk2 () []string{
-    return []string{"code","version","status",}
+func (t *NoMainEntity) Get0NoMainPk2 () []string{
+    return []string{"noCode","version",}
 }
 
 
@@ -323,7 +308,7 @@ func (t *DicMainEntity) Get0DicMainPk2 () []string{
 
     */
 
-func (t *DicMainEntity) Get0PRIMARY () []string{
+func (t *NoMainEntity) Get0PRIMARY () []string{
     return []string{"id",}
 }
 

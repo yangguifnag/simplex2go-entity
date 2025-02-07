@@ -9,6 +9,9 @@ import (
 
 
 /*
+
+    - ce5959e0-25a5-40f3-a5b0-f70b8f7c6934 -
+
     模板文件 自动生成
     实体映射
     库名: simplex_core_db
@@ -16,7 +19,7 @@ import (
     解释: Simplex2 CodeCreator
     作者: Simplex2
     版本: 1.0
-    创建时间: 2025-02-07 22:47:55
+    创建时间: 2025-02-08 01:17:50
     是否虚拟表: 否
     是否存在审计字段: 是
     是否存在逻辑状态字段: 否
@@ -29,7 +32,7 @@ import (
     Description: Simplex2 CodeCreator
     Author: Simplex2
     Version: 1.0
-    Creation Time: 2025-02-07 22:47:55
+    Creation Time: 2025-02-08 01:17:50
     Is Virtual Table: No
     Has Audit Fields: Yes
     Has Logical Status Field: No

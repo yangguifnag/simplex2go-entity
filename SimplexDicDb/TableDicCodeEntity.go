@@ -15,7 +15,7 @@ import (
     模板文件 自动生成
     实体映射
     库名: simplex_dic_db
-    表名: dic_main
+    表名: dic_code
     解释: Simplex2 CodeCreator
     作者: Simplex2
     版本: 1.0
@@ -28,7 +28,7 @@ import (
     Entity Mapping
 
     Database Name: simplex_dic_db
-    Table Name: dic_main
+    Table Name: dic_code
     Description: Simplex2 CodeCreator
     Author: Simplex2
     Version: 1.0
@@ -39,18 +39,18 @@ import (
 
 */
 
-type DicMainEntity struct {
+type DicCodeEntity struct {
 
 
 
 
     /*  字段名: code
         类型: VARCHAR
-        字段解释: 字典Code
+        字段解释: 字典码
         字段长度: 100
         是否主键: 否
         是否为空: 否
-        归宿主键: dic_main_pk_2
+        归宿主键: dic_code_pk_2
 
     */
 
@@ -61,7 +61,7 @@ type DicMainEntity struct {
 
     /*  字段名: createBy
         类型: VARCHAR
-        字段解释: 创建人
+        字段解释: --
         字段长度: 50
         是否主键: 否
         是否为空: 否
@@ -76,7 +76,7 @@ type DicMainEntity struct {
 
     /*  字段名: createDate
         类型: DATETIME
-        字段解释: 创建日期
+        字段解释: --
         字段长度: -
         是否主键: 否
         是否为空: 否
@@ -85,66 +85,6 @@ type DicMainEntity struct {
     */
 
     CreateDate time.Time `mapstructure:",omitempty" gorm:"column:createDate;default:null" json:"createDate"`
-
-
-
-
-    /*  字段名: desc
-        类型: VARCHAR
-        字段解释: 备注
-        字段长度: 200
-        是否主键: 否
-        是否为空: 否
-        归宿主键: -
-
-    */
-
-    Desc string `mapstructure:",omitempty" gorm:"column:desc" json:"desc"`
-
-
-
-
-    /*  字段名: dicName
-        类型: VARCHAR
-        字段解释: 字典名
-        字段长度: 100
-        是否主键: 否
-        是否为空: 否
-        归宿主键: -
-
-    */
-
-    DicName string `mapstructure:",omitempty" gorm:"column:dicName" json:"dicName"`
-
-
-
-
-    /*  字段名: dicTable
-        类型: VARCHAR
-        字段解释: 字典表名
-        字段长度: 100
-        是否主键: 否
-        是否为空: 否
-        归宿主键: -
-
-    */
-
-    DicTable string `mapstructure:",omitempty" gorm:"column:dicTable" json:"dicTable"`
-
-
-
-
-    /*  字段名: dicType
-        类型: VARCHAR
-        字段解释: 字典类型
-        字段长度: 100
-        是否主键: 否
-        是否为空: 否
-        归宿主键: -
-
-    */
-
-    DicType string `mapstructure:",omitempty" gorm:"column:dicType" json:"dicType"`
 
 
 
@@ -164,43 +104,43 @@ type DicMainEntity struct {
 
 
 
-    /*  字段名: labelKey
-        类型: VARCHAR
-        字段解释: 字典键名
-        字段长度: 50
+    /*  字段名: order
+        类型: DOUBLE
+        字段解释: 排序
+        字段长度: -
         是否主键: 否
         是否为空: 否
         归宿主键: -
 
     */
 
-    LabelKey string `mapstructure:",omitempty" gorm:"column:labelKey" json:"labelKey"`
+    Order float64 `mapstructure:",omitempty" gorm:"column:order" json:"order"`
 
 
 
 
-    /*  字段名: parentKey
-        类型: VARCHAR
-        字段解释: 父值键名
-        字段长度: 50
+    /*  字段名: parentId
+        类型: INT
+        字段解释: 父id
+        字段长度: -
         是否主键: 否
         是否为空: 否
         归宿主键: -
 
     */
 
-    ParentKey string `mapstructure:",omitempty" gorm:"column:parentKey" json:"parentKey"`
+    ParentId int `mapstructure:",omitempty" gorm:"column:parentId" json:"parentId"`
 
 
 
 
     /*  字段名: status
         类型: INT
-        字段解释: --
+        字段解释: 状态
         字段长度: -
         是否主键: 否
         是否为空: 否
-        归宿主键: dic_main_pk_2
+        归宿主键: dic_code_pk_2
 
     */
 
@@ -211,7 +151,7 @@ type DicMainEntity struct {
 
     /*  字段名: updateBy
         类型: VARCHAR
-        字段解释: 更新人
+        字段解释: --
         字段长度: 50
         是否主键: 否
         是否为空: 否
@@ -226,7 +166,7 @@ type DicMainEntity struct {
 
     /*  字段名: updateDate
         类型: DATETIME
-        字段解释: 更新时间
+        字段解释: --
         字段长度: -
         是否主键: 否
         是否为空: 否
@@ -239,17 +179,32 @@ type DicMainEntity struct {
 
 
 
-    /*  字段名: valueKey
+    /*  字段名: value
         类型: VARCHAR
-        字段解释: 字典值键
-        字段长度: 50
+        字段解释: 码值
+        字段长度: 200
+        是否主键: 否
+        是否为空: 否
+        归宿主键: dic_code_pk_2
+
+    */
+
+    Value string `mapstructure:",omitempty" gorm:"column:value" json:"value"`
+
+
+
+
+    /*  字段名: valueName
+        类型: VARCHAR
+        字段解释: 值名称
+        字段长度: 200
         是否主键: 否
         是否为空: 否
         归宿主键: -
 
     */
 
-    ValueKey string `mapstructure:",omitempty" gorm:"column:valueKey" json:"valueKey"`
+    ValueName string `mapstructure:",omitempty" gorm:"column:valueName" json:"valueName"`
 
 
 
@@ -260,7 +215,7 @@ type DicMainEntity struct {
         字段长度: 20
         是否主键: 否
         是否为空: 否
-        归宿主键: dic_main_pk_2
+        归宿主键: -
 
     */
 
@@ -275,8 +230,8 @@ type DicMainEntity struct {
 
     */
 
-func (t *DicMainEntity) GetTableName() string{
-    return "dic_main"
+func (t *DicCodeEntity) GetTableName() string{
+    return "dic_code"
 }
 
 
@@ -286,8 +241,8 @@ func (t *DicMainEntity) GetTableName() string{
 
     */
 
-func (t *DicMainEntity) GetColumnNum() int{
-    return 15
+func (t *DicCodeEntity) GetColumnNum() int{
+    return 12
 }
 
 
@@ -297,8 +252,8 @@ func (t *DicMainEntity) GetColumnNum() int{
 
     */
 
-func (t *DicMainEntity) GetFields() []string{
-    return []string{"code","createBy","createDate","desc","dicName","dicTable","dicType","id","labelKey","parentKey","status","updateBy","updateDate","valueKey","version",}
+func (t *DicCodeEntity) GetFields() []string{
+    return []string{"code","createBy","createDate","id","order","parentId","status","updateBy","updateDate","value","valueName","version",}
 }
 
 /*** 获取主键/联合主键方法 开始 方法名皆为Get0开头 ***/
@@ -307,13 +262,13 @@ func (t *DicMainEntity) GetFields() []string{
 
 
 
-    /* 方法名: Get0DicMainPk2
+    /* 方法名: Get0DicCodePk2
        返回值: []string
 
     */
 
-func (t *DicMainEntity) Get0DicMainPk2 () []string{
-    return []string{"code","version","status",}
+func (t *DicCodeEntity) Get0DicCodePk2 () []string{
+    return []string{"code","value","status",}
 }
 
 
@@ -323,7 +278,7 @@ func (t *DicMainEntity) Get0DicMainPk2 () []string{
 
     */
 
-func (t *DicMainEntity) Get0PRIMARY () []string{
+func (t *DicCodeEntity) Get0PRIMARY () []string{
     return []string{"id",}
 }
 

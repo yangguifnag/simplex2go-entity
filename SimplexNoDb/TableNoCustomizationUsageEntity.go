@@ -1,4 +1,4 @@
-package SimplexCoreDbEntity
+package SimplexNoDbEntity
 
 
 
@@ -14,12 +14,12 @@ import (
 
     模板文件 自动生成
     实体映射
-    库名: simplex_core_db
-    表名: core_table_main
+    库名: simplex_no_db
+    表名: no_customization_usage
     解释: Simplex2 CodeCreator
     作者: Simplex2
     版本: 1.0
-    创建时间: 2025-02-08 01:17:49
+    创建时间: 2025-02-08 01:17:50
     是否虚拟表: 否
     是否存在审计字段: 否
     是否存在逻辑状态字段: 是
@@ -27,19 +27,19 @@ import (
     Template File Auto-Generation
     Entity Mapping
 
-    Database Name: simplex_core_db
-    Table Name: core_table_main
+    Database Name: simplex_no_db
+    Table Name: no_customization_usage
     Description: Simplex2 CodeCreator
     Author: Simplex2
     Version: 1.0
-    Creation Time: 2025-02-08 01:17:49
+    Creation Time: 2025-02-08 01:17:50
     Is Virtual Table: No
     Has Audit Fields: No
     Has Logical Status Field: Yes
 
 */
 
-type CoreTableMainEntity struct {
+type NoCustomizationUsageEntity struct {
 
 
 
@@ -74,21 +74,6 @@ type CoreTableMainEntity struct {
 
 
 
-    /*  字段名: dbName
-        类型: VARCHAR
-        字段解释: --
-        字段长度: 200
-        是否主键: 否
-        是否为空: 否
-        归宿主键: core_table_main_pk_2
-
-    */
-
-    DbName string `mapstructure:",omitempty" gorm:"column:dbName" json:"dbName"`
-
-
-
-
     /*  字段名: id
         类型: INT
         字段解释: --
@@ -104,6 +89,36 @@ type CoreTableMainEntity struct {
 
 
 
+    /*  字段名: no
+        类型: VARCHAR
+        字段解释: --
+        字段长度: 200
+        是否主键: 否
+        是否为空: 否
+        归宿主键: no_customization_usage_pk_2
+
+    */
+
+    No string `mapstructure:",omitempty" gorm:"column:no" json:"no"`
+
+
+
+
+    /*  字段名: noCode
+        类型: VARCHAR
+        字段解释: --
+        字段长度: 50
+        是否主键: 否
+        是否为空: 否
+        归宿主键: no_customization_usage_pk_2
+
+    */
+
+    NoCode string `mapstructure:",omitempty" gorm:"column:noCode" json:"noCode"`
+
+
+
+
     /*  字段名: status
         类型: INT
         字段解释: --
@@ -115,21 +130,6 @@ type CoreTableMainEntity struct {
     */
 
     Status int `mapstructure:",omitempty" gorm:"column:status" json:"status"`
-
-
-
-
-    /*  字段名: tableName
-        类型: VARCHAR
-        字段解释: --
-        字段长度: 200
-        是否主键: 否
-        是否为空: 否
-        归宿主键: core_table_main_pk_2
-
-    */
-
-    TableName string `mapstructure:",omitempty" gorm:"column:tableName" json:"tableName"`
 
 
 
@@ -170,8 +170,8 @@ type CoreTableMainEntity struct {
 
     */
 
-func (t *CoreTableMainEntity) GetTableName() string{
-    return "core_table_main"
+func (t *NoCustomizationUsageEntity) GetTableName() string{
+    return "no_customization_usage"
 }
 
 
@@ -181,7 +181,7 @@ func (t *CoreTableMainEntity) GetTableName() string{
 
     */
 
-func (t *CoreTableMainEntity) GetColumnNum() int{
+func (t *NoCustomizationUsageEntity) GetColumnNum() int{
     return 8
 }
 
@@ -192,8 +192,8 @@ func (t *CoreTableMainEntity) GetColumnNum() int{
 
     */
 
-func (t *CoreTableMainEntity) GetFields() []string{
-    return []string{"createBy","createDate","dbName","id","status","tableName","updateBy","updateDate",}
+func (t *NoCustomizationUsageEntity) GetFields() []string{
+    return []string{"createBy","createDate","id","no","noCode","status","updateBy","updateDate",}
 }
 
 /*** 获取主键/联合主键方法 开始 方法名皆为Get0开头 ***/
@@ -202,13 +202,13 @@ func (t *CoreTableMainEntity) GetFields() []string{
 
 
 
-    /* 方法名: Get0CoreTableMainPk2
+    /* 方法名: Get0NoCustomizationUsagePk2
        返回值: []string
 
     */
 
-func (t *CoreTableMainEntity) Get0CoreTableMainPk2 () []string{
-    return []string{"tableName","dbName",}
+func (t *NoCustomizationUsageEntity) Get0NoCustomizationUsagePk2 () []string{
+    return []string{"noCode","no",}
 }
 
 
@@ -218,7 +218,7 @@ func (t *CoreTableMainEntity) Get0CoreTableMainPk2 () []string{
 
     */
 
-func (t *CoreTableMainEntity) Get0PRIMARY () []string{
+func (t *NoCustomizationUsageEntity) Get0PRIMARY () []string{
     return []string{"id",}
 }
 

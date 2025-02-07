@@ -9,6 +9,9 @@ import (
 
 
 /*
+
+    - ce5959e0-25a5-40f3-a5b0-f70b8f7c6934 -
+
     模板文件 自动生成
     实体映射
     库名: simplex_core_db
@@ -16,7 +19,7 @@ import (
     解释: Simplex2 CodeCreator
     作者: Simplex2
     版本: 1.0
-    创建时间: 2025-02-07 22:47:55
+    创建时间: 2025-02-08 01:17:49
     是否虚拟表: 否
     是否存在审计字段: 否
     是否存在逻辑状态字段: 是
@@ -29,7 +32,7 @@ import (
     Description: Simplex2 CodeCreator
     Author: Simplex2
     Version: 1.0
-    Creation Time: 2025-02-07 22:47:55
+    Creation Time: 2025-02-08 01:17:49
     Is Virtual Table: No
     Has Audit Fields: No
     Has Logical Status Field: Yes
@@ -97,6 +100,21 @@ type CoreTableTrackEntity struct {
     */
 
     Id int `mapstructure:",omitempty" gorm:"primaryKey;column:id" json:"id"`
+
+
+
+
+    /*  字段名: orderId
+        类型: VARCHAR
+        字段解释: --
+        字段长度: 50
+        是否主键: 否
+        是否为空: 否
+        归宿主键: -
+
+    */
+
+    OrderId string `mapstructure:",omitempty" gorm:"column:orderId" json:"orderId"`
 
 
 
@@ -179,7 +197,7 @@ func (t *CoreTableTrackEntity) GetTableName() string{
     */
 
 func (t *CoreTableTrackEntity) GetColumnNum() int{
-    return 8
+    return 9
 }
 
 
@@ -190,7 +208,7 @@ func (t *CoreTableTrackEntity) GetColumnNum() int{
     */
 
 func (t *CoreTableTrackEntity) GetFields() []string{
-    return []string{"createBy","createDate","dbName","id","status","tableName","updateBy","updateDate",}
+    return []string{"createBy","createDate","dbName","id","orderId","status","tableName","updateBy","updateDate",}
 }
 
 /*** 获取主键/联合主键方法 开始 方法名皆为Get0开头 ***/

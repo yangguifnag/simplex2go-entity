@@ -1,4 +1,4 @@
-package SimplexCoreDbEntity
+package SimplexNoDbEntity
 
 
 
@@ -14,12 +14,12 @@ import (
 
     模板文件 自动生成
     实体映射
-    库名: simplex_core_db
-    表名: core_table_main
+    库名: simplex_no_db
+    表名: no_part_usage
     解释: Simplex2 CodeCreator
     作者: Simplex2
     版本: 1.0
-    创建时间: 2025-02-08 01:17:49
+    创建时间: 2025-02-08 01:17:50
     是否虚拟表: 否
     是否存在审计字段: 否
     是否存在逻辑状态字段: 是
@@ -27,19 +27,34 @@ import (
     Template File Auto-Generation
     Entity Mapping
 
-    Database Name: simplex_core_db
-    Table Name: core_table_main
+    Database Name: simplex_no_db
+    Table Name: no_part_usage
     Description: Simplex2 CodeCreator
     Author: Simplex2
     Version: 1.0
-    Creation Time: 2025-02-08 01:17:49
+    Creation Time: 2025-02-08 01:17:50
     Is Virtual Table: No
     Has Audit Fields: No
     Has Logical Status Field: Yes
 
 */
 
-type CoreTableMainEntity struct {
+type NoPartUsageEntity struct {
+
+
+
+
+    /*  字段名: beginDate
+        类型: DATETIME
+        字段解释: --
+        字段长度: -
+        是否主键: 否
+        是否为空: 否
+        归宿主键: no_part_usage_pk_2
+
+    */
+
+    BeginDate time.Time `mapstructure:",omitempty" gorm:"column:beginDate;default:null" json:"beginDate"`
 
 
 
@@ -74,17 +89,17 @@ type CoreTableMainEntity struct {
 
 
 
-    /*  字段名: dbName
-        类型: VARCHAR
+    /*  字段名: endDate
+        类型: DATETIME
         字段解释: --
-        字段长度: 200
+        字段长度: -
         是否主键: 否
         是否为空: 否
-        归宿主键: core_table_main_pk_2
+        归宿主键: no_part_usage_pk_2
 
     */
 
-    DbName string `mapstructure:",omitempty" gorm:"column:dbName" json:"dbName"`
+    EndDate time.Time `mapstructure:",omitempty" gorm:"column:endDate;default:null" json:"endDate"`
 
 
 
@@ -104,6 +119,36 @@ type CoreTableMainEntity struct {
 
 
 
+    /*  字段名: noCode
+        类型: VARCHAR
+        字段解释: --
+        字段长度: 50
+        是否主键: 否
+        是否为空: 否
+        归宿主键: no_part_usage_pk_2
+
+    */
+
+    NoCode string `mapstructure:",omitempty" gorm:"column:noCode" json:"noCode"`
+
+
+
+
+    /*  字段名: partId
+        类型: INT
+        字段解释: --
+        字段长度: -
+        是否主键: 否
+        是否为空: 否
+        归宿主键: no_part_usage_pk_2
+
+    */
+
+    PartId int `mapstructure:",omitempty" gorm:"column:partId" json:"partId"`
+
+
+
+
     /*  字段名: status
         类型: INT
         字段解释: --
@@ -115,21 +160,6 @@ type CoreTableMainEntity struct {
     */
 
     Status int `mapstructure:",omitempty" gorm:"column:status" json:"status"`
-
-
-
-
-    /*  字段名: tableName
-        类型: VARCHAR
-        字段解释: --
-        字段长度: 200
-        是否主键: 否
-        是否为空: 否
-        归宿主键: core_table_main_pk_2
-
-    */
-
-    TableName string `mapstructure:",omitempty" gorm:"column:tableName" json:"tableName"`
 
 
 
@@ -160,6 +190,21 @@ type CoreTableMainEntity struct {
     */
 
     UpdateDate time.Time `mapstructure:",omitempty" gorm:"column:updateDate;default:null" json:"updateDate"`
+
+
+
+
+    /*  字段名: useNo
+        类型: VARCHAR
+        字段解释: --
+        字段长度: 200
+        是否主键: 否
+        是否为空: 否
+        归宿主键: -
+
+    */
+
+    UseNo string `mapstructure:",omitempty" gorm:"column:useNo" json:"useNo"`
 }
 
 
@@ -170,8 +215,8 @@ type CoreTableMainEntity struct {
 
     */
 
-func (t *CoreTableMainEntity) GetTableName() string{
-    return "core_table_main"
+func (t *NoPartUsageEntity) GetTableName() string{
+    return "no_part_usage"
 }
 
 
@@ -181,8 +226,8 @@ func (t *CoreTableMainEntity) GetTableName() string{
 
     */
 
-func (t *CoreTableMainEntity) GetColumnNum() int{
-    return 8
+func (t *NoPartUsageEntity) GetColumnNum() int{
+    return 11
 }
 
 
@@ -192,8 +237,8 @@ func (t *CoreTableMainEntity) GetColumnNum() int{
 
     */
 
-func (t *CoreTableMainEntity) GetFields() []string{
-    return []string{"createBy","createDate","dbName","id","status","tableName","updateBy","updateDate",}
+func (t *NoPartUsageEntity) GetFields() []string{
+    return []string{"beginDate","createBy","createDate","endDate","id","noCode","partId","status","updateBy","updateDate","useNo",}
 }
 
 /*** 获取主键/联合主键方法 开始 方法名皆为Get0开头 ***/
@@ -202,13 +247,13 @@ func (t *CoreTableMainEntity) GetFields() []string{
 
 
 
-    /* 方法名: Get0CoreTableMainPk2
+    /* 方法名: Get0NoPartUsagePk2
        返回值: []string
 
     */
 
-func (t *CoreTableMainEntity) Get0CoreTableMainPk2 () []string{
-    return []string{"tableName","dbName",}
+func (t *NoPartUsageEntity) Get0NoPartUsagePk2 () []string{
+    return []string{"noCode","partId","beginDate","endDate",}
 }
 
 
@@ -218,7 +263,7 @@ func (t *CoreTableMainEntity) Get0CoreTableMainPk2 () []string{
 
     */
 
-func (t *CoreTableMainEntity) Get0PRIMARY () []string{
+func (t *NoPartUsageEntity) Get0PRIMARY () []string{
     return []string{"id",}
 }
 

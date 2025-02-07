@@ -21,6 +21,7 @@
 go.work
 go.work.sum
 
+
 # env file
 .env
 
@@ -31,3 +32,4 @@ _config/
 _codeCreate/
 main.go
 _db/
+_entity/
