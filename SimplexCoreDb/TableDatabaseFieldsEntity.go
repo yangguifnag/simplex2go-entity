@@ -16,7 +16,7 @@ import (
     解释: Simplex2 CodeCreator
     作者: Simplex2
     版本: 1.0
-    创建时间: 2025-02-07 22:05:55
+    创建时间: 2025-02-07 22:47:55
     是否虚拟表: 否
     是否存在审计字段: 是
     是否存在逻辑状态字段: 否
@@ -29,7 +29,7 @@ import (
     Description: Simplex2 CodeCreator
     Author: Simplex2
     Version: 1.0
-    Creation Time: 2025-02-07 22:05:55
+    Creation Time: 2025-02-07 22:47:55
     Is Virtual Table: No
     Has Audit Fields: Yes
     Has Logical Status Field: No
