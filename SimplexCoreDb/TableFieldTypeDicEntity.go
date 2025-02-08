@@ -8,7 +8,7 @@ package SimplexCoreDbEntity
 
 /*
 
-    - ce5959e0-25a5-40f3-a5b0-f70b8f7c6934 -
+    - 64cce7c8-b239-490f-9563-2c9c9dfef611 -
 
     模板文件 自动生成
     实体映射
@@ -17,7 +17,7 @@ package SimplexCoreDbEntity
     解释: Simplex2 CodeCreator
     作者: Simplex2
     版本: 1.0
-    创建时间: 2025-02-08 01:17:50
+    创建时间: 2025-02-08 01:56:40
     是否虚拟表: 否
     是否存在审计字段: 否
     是否存在逻辑状态字段: 是
@@ -30,7 +30,7 @@ package SimplexCoreDbEntity
     Description: Simplex2 CodeCreator
     Author: Simplex2
     Version: 1.0
-    Creation Time: 2025-02-08 01:17:50
+    Creation Time: 2025-02-08 01:56:40
     Is Virtual Table: No
     Has Audit Fields: No
     Has Logical Status Field: Yes

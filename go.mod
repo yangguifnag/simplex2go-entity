@@ -3,7 +3,7 @@ module github.com/yangguifnag/simplex2go-entity
 go 1.23
 
 require (
-	github.com/yangguifnag/simplex2go v0.0.17
+	github.com/yangguifnag/simplex2go v0.0.19
 	gorm.io/gorm v1.25.12
 )
 
